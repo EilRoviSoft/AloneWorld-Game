@@ -12,6 +12,33 @@
 namespace alone {
 	extern Core core;
 
+	//static
+
+	void Tilemap::generate(std::string filename, size_t width, size_t height) {
+		std::ofstream file(filename);
+		file << width << " " << height << '\n';
+
+		file << "0 0 11 ";
+		for (size_t i = 1; i != width - 1; i++)
+			file << "0 0 6 ";
+		file << "0 0 8\n";
+
+		for (size_t i = 1; i != height - 1; i++) {
+			file << "0 0 7 ";
+			for (size_t j = 1; j != width - 1; j++) {
+				file << "0 3 1 ";
+			}
+			file << "0 0 7\n";
+		}
+
+		file << "0 0 10 ";
+		for (size_t i = 1; i != width - 1; i++)
+			file << "0 0 6 ";
+		file << "0 0 9 ";
+
+		file.close();
+	}
+
 	//Tilemap
 
 	void Tilemap::load(const toml::value& toml) {

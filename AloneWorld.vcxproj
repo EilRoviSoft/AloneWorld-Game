@@ -159,6 +159,7 @@
   <ItemGroup>
     <ClCompile Include="include\alone\control\InputManager.cpp" />
     <ClCompile Include="include\alone\control\TextureManager.cpp" />
+    <ClCompile Include="include\alone\game\Physics.cpp" />
     <ClCompile Include="include\alone\game\Tile.cpp" />
     <ClCompile Include="include\alone\game\TileInfo.cpp" />
     <ClCompile Include="include\alone\game\Tilemap.cpp" />
@@ -166,6 +167,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Game.hpp" />
     <ClInclude Include="include\alone\control\Core.hpp" />
     <ClInclude Include="include\alone\control\InputManager.hpp" />
     <ClInclude Include="include\alone\control\TextureManager.hpp" />

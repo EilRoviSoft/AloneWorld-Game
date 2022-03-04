@@ -8,6 +8,7 @@
     <ClCompile Include="include\alone\game\Tilemap.cpp" />
     <ClCompile Include="include\alone\control\InputManager.cpp" />
     <ClCompile Include="include\alone\game\Tile.cpp" />
+    <ClCompile Include="include\alone\game\Physics.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source %28src%29">
@@ -33,6 +34,7 @@
     <ClInclude Include="include\alone\primitive\Util.hpp" />
     <ClInclude Include="include\alone\graphics\Camera.hpp" />
     <ClInclude Include="include\alone\game\Physics.hpp" />
+    <ClInclude Include="Game.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="lib\glfw3.lib" />

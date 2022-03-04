@@ -15,36 +15,10 @@ alone::Core& core = alone::core;
 void init() {
 	core.textures.loadFromFile("source/settings/texture.toml");
 	core.input.loadFromFile("source/settings/input.toml");
-}
-
-void generate(std::string filename, size_t width, size_t height) {
-	std::ofstream file(filename);
-	file << width << " " << height << '\n';
-
-	file << "0 0 11 ";
-	for (size_t i = 1; i != width - 1; i++)
-		file << "0 0 6 ";
-	file << "0 0 8\n";
-
-	for (size_t i = 1; i != height - 1; i++) {
-		file << "0 0 7 ";
-		for (size_t j = 1; j != width - 1; j++) {
-			file << "0 3 1 ";
-		}
-		file << "0 0 7\n";
-	}
-
-	file << "0 0 10 ";
-	for (size_t i = 1; i != width - 1; i++)
-		file << "0 0 6 ";
-	file << "0 0 9 ";
-
-	file.close();
+	core.font.loadFromFile("source/settings/arial.ttf");
 }
 
 int main() {
-	//generate("source/settings/test.map", 100, 100);
-
 	init();
 
 	const auto& moveUp = core.input.at(1);
@@ -61,18 +35,8 @@ int main() {
 	tilemap.loadFromFile("source/settings/tilemap.toml");
 
 	sf::RenderStates states = sf::RenderStates::Default;
-
-	std::function render = [&]() {
-		tilemap.update(position);
-
-		//rendering
-		tilemap.render();
-
-		//drawing on window
-		core.batch.render(core.window, states);
-		core.batch.flush();
-		core.window.display();
-	};
+	
+	sf::Text fps("", core.font);
 
 	while (core.window.isOpen()) {
 		//event processing
@@ -81,6 +45,9 @@ int main() {
 			if (event.type == sf::Event::Closed)
 				core.window.close();
 		}
+
+		core.clock.restart();
+		auto start = core.clock.getElapsedTime().asMicroseconds();
 
 		//preparing
 		core.window.clear(sf::Color::Black);
@@ -97,7 +64,20 @@ int main() {
 		if (moveDown.now)
 			position.y += 1;
 
-		render();
+		tilemap.update(position);
+
+		//rendering
+		tilemap.render();
+
+		//drawing on window
+		core.batch.render(core.window, states);
+		core.batch.flush();
+
+		auto end = core.clock.getElapsedTime().asMicroseconds();
+		fps.setString(std::to_string(end - start));
+		core.window.draw(fps);
+
+		core.window.display();
 	}
 
 	core.window.close();

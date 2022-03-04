@@ -30,5 +30,6 @@ namespace alone {
 
 		sf::RenderWindow window;
 		sf::Clock clock;
+		sf::Font font;
 	};
 }

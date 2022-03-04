@@ -1,6 +1,7 @@
 #pragma once
 //std
 #include <memory>
+#include <string>
 
 //sfml
 #include <SFML/Graphics.hpp>
@@ -18,6 +19,8 @@
 namespace alone {
 	class Tilemap : public ITomlIO {
 	public:
+		static void generate(std::string filename, size_t width, size_t height);
+
 		void load(const toml::value& toml) override;
 		toml::value save() const override;
 
