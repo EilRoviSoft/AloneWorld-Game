@@ -8,10 +8,10 @@
 //toml
 #include <toml.hpp>
 
-//alone
+//aesir
 #include <alone/primitive/TomlIO.hpp>
 
-namespace alone {
+namespace aesir {
 	struct InputStatus {
 		bool now = false, pre = false;
 

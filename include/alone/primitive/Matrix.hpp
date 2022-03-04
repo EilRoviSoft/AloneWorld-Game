@@ -2,7 +2,7 @@
 //std
 #include <vector>
 
-namespace alone {
+namespace aesir {
 	template <class _T>
 	//using _T = int;
 	class Matrix {

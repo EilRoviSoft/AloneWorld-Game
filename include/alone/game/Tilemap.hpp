@@ -9,14 +9,14 @@
 //toml
 #include <toml.hpp>
 
-//alone
+//aesir
 #include <alone/primitive/Util.hpp>
 #include <alone/primitive/TomlIO.hpp>
 #include <alone/primitive/Matrix.hpp>
 #include <alone/game/Tile.hpp>
 #include <alone/game/TileInfo.hpp>
 
-namespace alone {
+namespace aesir {
 	class Tilemap : public ITomlIO {
 	public:
 		static void generate(std::string filename, size_t width, size_t height);

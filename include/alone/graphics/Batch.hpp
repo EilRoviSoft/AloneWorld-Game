@@ -7,7 +7,7 @@
 //sfml
 #include <SFML/Graphics.hpp>
 
-namespace alone {
+namespace aesir {
 	class Batch {
 	public:
 		struct request_t {

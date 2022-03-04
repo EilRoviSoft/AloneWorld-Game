@@ -1,7 +1,7 @@
-//alone
+//aesir
 #include <alone/game/Tile.hpp>
 
-namespace alone {
+namespace aesir {
 	const float Tile::size = 32.f;
 
 	Tile::Tile() : m_info(nullptr), m_variation(0), m_shape(0) {}

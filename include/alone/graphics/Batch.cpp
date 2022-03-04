@@ -1,7 +1,7 @@
-//alone
+//aesir
 #include <alone/graphics/Batch.hpp>
 
-namespace alone {
+namespace aesir {
 	//Batch
 
 	void Batch::send(request_t&& request) {

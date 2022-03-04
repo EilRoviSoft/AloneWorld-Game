@@ -1,5 +1,5 @@
 #include "InputManager.hpp"
-namespace alone {
+namespace aesir {
 	//InputStatus
 
 	bool InputStatus::isKeyPressed() const {

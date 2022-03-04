@@ -2,7 +2,7 @@
 //sfml
 #include <SFML/Graphics.hpp>
 
-namespace alone {
+namespace aesir {
 	class Camera/* : public sf::View*/ {
 	public:
 		sf::Vector2f& position() { return this->m_position; }

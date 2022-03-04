@@ -1,8 +1,8 @@
 #pragma once
-//alone
+//aesir
 #include <alone/game/TileInfo.hpp>
 
-namespace alone {
+namespace aesir {
 	struct Tile {
 		friend class Tilemap;
 	public:

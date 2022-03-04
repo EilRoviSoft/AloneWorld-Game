@@ -10,11 +10,11 @@
 //toml
 #include <toml.hpp>
 
-//alone
+//aesir
 #include <alone/primitive/TomlIO.hpp>
 #include <alone/primitive/util.hpp>
 
-namespace alone {
+namespace aesir {
 	struct TileInfo {
 		friend class TileInfoContainer;
 		friend class Tilemap;

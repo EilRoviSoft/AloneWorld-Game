@@ -3,11 +3,11 @@
 #include <memory>
 #include <string>
 
-//alone
+//aesir
 #include <alone/control/TextureManager.hpp>
 #include <alone/control/Core.hpp>
 
-namespace alone {
+namespace aesir {
 	extern Core core;
 
 	void TextureManager::load(const toml::value& toml) {

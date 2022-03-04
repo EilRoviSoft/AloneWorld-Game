@@ -5,12 +5,12 @@
 //sf
 #include <SFML/Graphics.hpp>
 
-//alone
+//aesir
 #include <alone/graphics/Batch.hpp>
 #include <alone/control/TextureManager.hpp>
 #include <alone/control/InputManager.hpp>
 
-namespace alone {
+namespace aesir {
 	class Core {
 	public:
 		//util

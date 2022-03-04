@@ -6,11 +6,11 @@
 #include <alone/control/Core.hpp>
 #include <alone/game/Tilemap.hpp>
 
-namespace alone {
+namespace aesir {
 	Core core;
 }
 
-alone::Core& core = alone::core;
+aesir::Core& core = aesir::core;
 
 void init() {
 	core.textures.loadFromFile("source/settings/texture.toml");
@@ -31,7 +31,7 @@ int main() {
 
 	sf::Vector2f position = { 400.f, 300.f };
 
-	alone::Tilemap tilemap;
+	aesir::Tilemap tilemap;
 	tilemap.loadFromFile("source/settings/tilemap.toml");
 
 	sf::RenderStates states = sf::RenderStates::Default;

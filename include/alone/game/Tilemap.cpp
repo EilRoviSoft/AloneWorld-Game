@@ -2,14 +2,14 @@
 #include <fstream>
 #include <cmath>
 
-//alone
+//aesir
 #include <alone/control/Core.hpp>
 #include <alone/game/Tilemap.hpp>
 #include <alone/graphics/Batch.hpp>
 
 //How old is the auther of this text now?
 
-namespace alone {
+namespace aesir {
 	extern Core core;
 
 	//static
@@ -114,7 +114,7 @@ namespace alone {
 	void Tilemap::render() const {
 		//init
 
-		alone::QuadRequestBuilder builder;
+		aesir::QuadRequestBuilder builder;
 		sf::Vector2u windowSize = core.window.getSize();
 
 		//prepare

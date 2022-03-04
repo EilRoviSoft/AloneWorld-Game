@@ -8,11 +8,11 @@
 //toml
 #include <toml.hpp>
 
-//alone
+//aesir
 #include <alone/primitive/TomlIO.hpp>
 #include <alone/primitive/util.hpp>
 
-namespace alone {
+namespace aesir {
 	using TextureInfo = std::pair <std::string, std::shared_ptr <sf::Texture>>;
 
 	class TextureManager : public ITomlLoadable {

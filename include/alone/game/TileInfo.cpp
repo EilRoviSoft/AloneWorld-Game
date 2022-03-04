@@ -1,8 +1,8 @@
-//alone
+//aesir
 #include <alone/game/TileInfo.hpp>
 #include <alone/control/Core.hpp>
 
-namespace alone {
+namespace aesir {
 	extern Core core;
 
 	//TileInfo

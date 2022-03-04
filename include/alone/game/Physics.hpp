@@ -3,10 +3,10 @@
 #include <SFML/System/Clock.hpp>
 #include <SFML/System/Vector2.hpp>
 
-//alone
+//aesir
 #include <alone/primitive/Util.hpp>
 
-namespace alone {
+namespace aesir {
 	class BoxCollider {
 	public:
 		const sf::FloatRegion& box() const;

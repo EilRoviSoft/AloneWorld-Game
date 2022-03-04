@@ -1,8 +1,8 @@
-//alone
+//aesir
 #include <alone/game/Physics.hpp>
 #include <alone/control/Core.hpp>
 
-namespace alone {
+namespace aesir {
 	const sf::FloatRegion& BoxCollider::box() const { return this->m_box; }
 	sf::FloatRegion& BoxCollider::box() { return this->m_box; }
 	

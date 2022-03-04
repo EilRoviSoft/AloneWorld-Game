@@ -8,7 +8,7 @@
 //toml
 #include <toml.hpp>
 
-namespace alone {
+namespace aesir {
 	class ITomlLoadable {
 	public:
 		void loadFromFile(const std::string& filename) {
