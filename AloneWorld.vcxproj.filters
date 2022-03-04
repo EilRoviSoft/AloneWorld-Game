@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="include\alone\game\TileInfo.cpp" />
+    <ClCompile Include="include\alone\control\TextureManager.cpp" />
+    <ClCompile Include="include\alone\graphics\Batch.cpp" />
+    <ClCompile Include="include\alone\game\Tilemap.cpp" />
+    <ClCompile Include="include\alone\control\InputManager.cpp" />
+    <ClCompile Include="include\alone\game\Tile.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source %28src%29">
+      <UniqueIdentifier>{524e1df2-b26c-4379-84a8-d98efde8ddeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library %28lib%29">
+      <UniqueIdentifier>{c8ec0616-ddb7-43a2-96a0-1b719fcd4b21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include %28include%29">
+      <UniqueIdentifier>{c797cb3d-2912-4593-8e46-4068ad376413}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\alone\primitive\Matrix.hpp" />
+    <ClInclude Include="include\alone\game\Tilemap.hpp" />
+    <ClInclude Include="include\alone\game\Tile.hpp" />
+    <ClInclude Include="include\alone\primitive\TomlIO.hpp" />
+    <ClInclude Include="include\alone\game\TileInfo.hpp" />
+    <ClInclude Include="include\alone\control\Core.hpp" />
+    <ClInclude Include="include\alone\control\TextureManager.hpp" />
+    <ClInclude Include="include\alone\graphics\Batch.hpp" />
+    <ClInclude Include="include\alone\control\InputManager.hpp" />
+    <ClInclude Include="include\alone\primitive\Util.hpp" />
+    <ClInclude Include="include\alone\graphics\Camera.hpp" />
+    <ClInclude Include="include\alone\game\Physics.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lib\glfw3.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include=".gitignore" />
+    <None Include=".gitattributes" />
+    <None Include="source\settings\input.toml" />
+    <None Include="source\settings\texture.toml" />
+    <None Include="source\settings\tilemap.map" />
+    <None Include="source\settings\tilemap.toml" />
+    <None Include="source\textures\atlas.psd" />
+    <None Include="source\settings\test.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="source\textures\atlas.png" />
+    <Image Include="source\textures\example.png" />
+  </ItemGroup>
+</Project>

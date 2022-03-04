@@ -1,0 +1,11 @@
+[TileInfo]
+atlas = "atlas"
+content = [
+    { name = "T0", variations = 4, shapes = 32, x = 0, y = 0 }
+]
+
+[Map]
+path = "source/settings/test.map"
+dict = [
+    { id = 0, name = "T0" }
+]

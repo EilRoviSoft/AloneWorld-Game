@@ -1,0 +1,4 @@
+folder = "source/textures/"
+content = [
+    { name = "atlas", path = "atlas.png" }
+]
