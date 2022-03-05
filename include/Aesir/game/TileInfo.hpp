@@ -11,8 +11,8 @@
 #include <toml.hpp>
 
 //aesir
-#include <alone/primitive/TomlIO.hpp>
-#include <alone/primitive/util.hpp>
+#include <Aesir/primitive/TomlIO.hpp>
+#include <Aesir/primitive/util.hpp>
 
 namespace aesir {
 	struct TileInfo {

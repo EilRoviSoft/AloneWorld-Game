@@ -1,6 +1,6 @@
 //aesir
-#include <alone/game/TileInfo.hpp>
-#include <alone/control/Core.hpp>
+#include <Aesir/game/TileInfo.hpp>
+#include <Aesir/control/Core.hpp>
 
 namespace aesir {
 	extern Core core;

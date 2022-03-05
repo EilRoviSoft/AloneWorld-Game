@@ -16,6 +16,17 @@ namespace sf {
 
 		_T width() const { return x2 - x1; }
 		_T height() const { return y2 - y1; }
+
+		Vector2 <_T> center() const { return { (x1 + x2) / 2, (y1 + y2) / 2 }; }
+
+		Region& operator+=(const Vector2 <_T>& rhs) {
+			this->x1 += rhs.x;
+			this->x2 += rhs.x;
+			this->y1 += rhs.y;
+			this->y2 += rhs.y;
+
+			return *this;
+		}
 	};
 	using IntRegion = Region <int32_t>;
 	using FloatRegion = Region <float_t>;
@@ -27,4 +38,13 @@ namespace sf {
 	using Vector2ul = Vector2 <uint64_t>;
 	using UlongRect = Rect <uint64_t>;
 	using UlongRegion = Rect <uint64_t>;
+}
+
+namespace aesir {
+	template <class _T>
+	_T clamp(_T value, _T min, _T max) {
+		if (value < min) return min;
+		else if (value > max) return max;
+		else return value;
+	}
 }

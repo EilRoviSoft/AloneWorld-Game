@@ -2,7 +2,6 @@
 //std
 #include <list>
 #include <memory>
-//#include <array>
 
 //sfml
 #include <SFML/Graphics.hpp>

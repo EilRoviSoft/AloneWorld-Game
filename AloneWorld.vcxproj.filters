@@ -2,13 +2,14 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="include\alone\game\TileInfo.cpp" />
-    <ClCompile Include="include\alone\control\TextureManager.cpp" />
-    <ClCompile Include="include\alone\graphics\Batch.cpp" />
-    <ClCompile Include="include\alone\game\Tilemap.cpp" />
-    <ClCompile Include="include\alone\control\InputManager.cpp" />
-    <ClCompile Include="include\alone\game\Tile.cpp" />
-    <ClCompile Include="include\alone\game\Physics.cpp" />
+    <ClCompile Include="include\Aesir\game\TileInfo.cpp" />
+    <ClCompile Include="include\Aesir\control\TextureManager.cpp" />
+    <ClCompile Include="include\Aesir\graphics\Batch.cpp" />
+    <ClCompile Include="include\Aesir\game\Tilemap.cpp" />
+    <ClCompile Include="include\Aesir\control\InputManager.cpp" />
+    <ClCompile Include="include\Aesir\game\Tile.cpp" />
+    <ClCompile Include="include\Aesir\game\Physics.cpp" />
+    <ClCompile Include="source\Alone\Game.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source %28src%29">
@@ -22,19 +23,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\alone\primitive\Matrix.hpp" />
-    <ClInclude Include="include\alone\game\Tilemap.hpp" />
-    <ClInclude Include="include\alone\game\Tile.hpp" />
-    <ClInclude Include="include\alone\primitive\TomlIO.hpp" />
-    <ClInclude Include="include\alone\game\TileInfo.hpp" />
-    <ClInclude Include="include\alone\control\Core.hpp" />
-    <ClInclude Include="include\alone\control\TextureManager.hpp" />
-    <ClInclude Include="include\alone\graphics\Batch.hpp" />
-    <ClInclude Include="include\alone\control\InputManager.hpp" />
-    <ClInclude Include="include\alone\primitive\Util.hpp" />
-    <ClInclude Include="include\alone\graphics\Camera.hpp" />
-    <ClInclude Include="include\alone\game\Physics.hpp" />
-    <ClInclude Include="Game.hpp" />
+    <ClInclude Include="include\Aesir\primitive\Matrix.hpp" />
+    <ClInclude Include="include\Aesir\game\Tilemap.hpp" />
+    <ClInclude Include="include\Aesir\game\Tile.hpp" />
+    <ClInclude Include="include\Aesir\primitive\TomlIO.hpp" />
+    <ClInclude Include="include\Aesir\game\TileInfo.hpp" />
+    <ClInclude Include="include\Aesir\control\Core.hpp" />
+    <ClInclude Include="include\Aesir\control\TextureManager.hpp" />
+    <ClInclude Include="include\Aesir\graphics\Batch.hpp" />
+    <ClInclude Include="include\Aesir\control\InputManager.hpp" />
+    <ClInclude Include="include\Aesir\primitive\Util.hpp" />
+    <ClInclude Include="include\Aesir\graphics\Camera.hpp" />
+    <ClInclude Include="include\Aesir\game\Physics.hpp" />
+    <ClInclude Include="source\Alone\Game.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="lib\glfw3.lib" />
@@ -43,15 +44,18 @@
     <None Include="packages.config" />
     <None Include=".gitignore" />
     <None Include=".gitattributes" />
-    <None Include="source\settings\input.toml" />
-    <None Include="source\settings\texture.toml" />
-    <None Include="source\settings\tilemap.map" />
-    <None Include="source\settings\tilemap.toml" />
-    <None Include="source\textures\atlas.psd" />
-    <None Include="source\settings\test.map" />
+    <None Include="assets\settings\input.toml" />
+    <None Include="assets\settings\texture.toml" />
+    <None Include="assets\settings\tilemap.map" />
+    <None Include="assets\settings\tilemap.toml" />
+    <None Include="assets\textures\atlas.psd" />
+    <None Include="assets\settings\test.map" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="source\textures\atlas.png" />
-    <Image Include="source\textures\example.png" />
+    <Image Include="assets\textures\atlas.png" />
+    <Image Include="assets\textures\example.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="assets\settings\arial.ttf" />
   </ItemGroup>
 </Project>

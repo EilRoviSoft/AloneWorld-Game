@@ -1,4 +1,4 @@
-folder = "source/textures/"
+folder = "assets/textures/"
 content = [
     { name = "atlas", path = "atlas.png" }
 ]

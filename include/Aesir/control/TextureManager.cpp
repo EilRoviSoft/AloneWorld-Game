@@ -4,8 +4,8 @@
 #include <string>
 
 //aesir
-#include <alone/control/TextureManager.hpp>
-#include <alone/control/Core.hpp>
+#include <Aesir/control/TextureManager.hpp>
+#include <Aesir/control/Core.hpp>
 
 namespace aesir {
 	extern Core core;

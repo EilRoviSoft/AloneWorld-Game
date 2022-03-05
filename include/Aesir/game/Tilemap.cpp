@@ -3,9 +3,9 @@
 #include <cmath>
 
 //aesir
-#include <alone/control/Core.hpp>
-#include <alone/game/Tilemap.hpp>
-#include <alone/graphics/Batch.hpp>
+#include <Aesir/control/Core.hpp>
+#include <Aesir/game/Tilemap.hpp>
+#include <Aesir/graphics/Batch.hpp>
 
 //How old is the auther of this text now?
 

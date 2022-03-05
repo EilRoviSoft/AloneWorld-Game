@@ -9,8 +9,8 @@
 #include <toml.hpp>
 
 //aesir
-#include <alone/primitive/TomlIO.hpp>
-#include <alone/primitive/util.hpp>
+#include <Aesir/primitive/TomlIO.hpp>
+#include <Aesir/primitive/util.hpp>
 
 namespace aesir {
 	using TextureInfo = std::pair <std::string, std::shared_ptr <sf::Texture>>;

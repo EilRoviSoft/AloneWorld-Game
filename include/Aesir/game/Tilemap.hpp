@@ -10,11 +10,11 @@
 #include <toml.hpp>
 
 //aesir
-#include <alone/primitive/Util.hpp>
-#include <alone/primitive/TomlIO.hpp>
-#include <alone/primitive/Matrix.hpp>
-#include <alone/game/Tile.hpp>
-#include <alone/game/TileInfo.hpp>
+#include <Aesir/primitive/Util.hpp>
+#include <Aesir/primitive/TomlIO.hpp>
+#include <Aesir/primitive/Matrix.hpp>
+#include <Aesir/game/Tile.hpp>
+#include <Aesir/game/TileInfo.hpp>
 
 namespace aesir {
 	class Tilemap : public ITomlIO {

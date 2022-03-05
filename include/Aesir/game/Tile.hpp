@@ -1,6 +1,6 @@
 #pragma once
 //aesir
-#include <alone/game/TileInfo.hpp>
+#include <Aesir/game/TileInfo.hpp>
 
 namespace aesir {
 	struct Tile {

@@ -6,9 +6,9 @@
 #include <SFML/Graphics.hpp>
 
 //aesir
-#include <alone/graphics/Batch.hpp>
-#include <alone/control/TextureManager.hpp>
-#include <alone/control/InputManager.hpp>
+#include <Aesir/graphics/Batch.hpp>
+#include <Aesir/control/TextureManager.hpp>
+#include <Aesir/control/InputManager.hpp>
 
 namespace aesir {
 	class Core {

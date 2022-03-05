@@ -5,7 +5,7 @@ content = [
 ]
 
 [Map]
-path = "source/settings/test.map"
+path = "assets/settings/test.map"
 dict = [
     { id = 0, name = "T0" }
 ]

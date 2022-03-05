@@ -1,4 +1,6 @@
-#include "InputManager.hpp"
+//alone
+#include <Aesir/control/InputManager.hpp>
+
 namespace aesir {
 	//InputStatus
 

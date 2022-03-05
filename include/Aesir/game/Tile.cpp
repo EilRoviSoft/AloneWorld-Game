@@ -1,5 +1,5 @@
 //aesir
-#include <alone/game/Tile.hpp>
+#include <Aesir/game/Tile.hpp>
 
 namespace aesir {
 	const float Tile::size = 32.f;
