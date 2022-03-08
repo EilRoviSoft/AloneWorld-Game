@@ -112,14 +112,14 @@ namespace aesir {
 		this->m_vertexSize = 4ull * actualDrawSize.x * actualDrawSize.y;
 	}
 	void Tilemap::render() const {
-		//init
+		//_Init
 
 		aesir::QuadRequestBuilder builder;
 		sf::Vector2u windowSize = core.window.getSize();
 
 		//prepare
 
-		builder.createRequest(this->m_vertexSize, sf::PrimitiveType::Quads, this->m_tileinfo.texture());
+		builder.begin(this->m_vertexSize, sf::PrimitiveType::Quads, this->m_tileinfo.texture());
 
 		//rendering
 
@@ -150,6 +150,6 @@ namespace aesir {
 			}
 		}
 
-		core.batch.send(builder.releaseRequest());
+		core.batch.send(builder.end());
 	}
 }

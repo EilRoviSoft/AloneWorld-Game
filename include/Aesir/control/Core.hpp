@@ -2,6 +2,9 @@
 //std
 #include <string>
 
+//ctpl
+#include <CTPL/ctpl_stl.h>
+
 //sf
 #include <SFML/Graphics.hpp>
 
@@ -16,6 +19,7 @@ namespace aesir {
 		//util
 		
 		const std::hash <std::string> hasher;
+		ctpl::thread_pool threads;
 
 		//controllers
 

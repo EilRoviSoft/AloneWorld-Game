@@ -41,3 +41,4 @@ packages.config
 include/GLFW/*
 include/SFML/*
 include/toml/*
+include/Eventpp/*

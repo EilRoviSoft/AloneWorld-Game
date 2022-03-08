@@ -28,9 +28,9 @@ namespace aesir {
 
 	class RequestBuilder {
 	public:
-		void createRequest(size_t size, sf::PrimitiveType type, const sf::Texture& texture);
-		virtual void add(sf::Vertex* verteces) = 0;
-		Batch::request_t&& releaseRequest();
+		void begin(size_t size, sf::PrimitiveType type, const sf::Texture& texture);
+		virtual void add(sf::Vertex* vertices) = 0;
+		Batch::request_t&& end();
 
 	protected:
 		std::unique_ptr <Batch::request_t> m_request = nullptr;

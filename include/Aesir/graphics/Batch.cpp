@@ -28,11 +28,11 @@ namespace aesir {
 
 	//RequestBuilder
 
-	void RequestBuilder::createRequest(size_t size, sf::PrimitiveType type, const sf::Texture& texture) {
+	void RequestBuilder::begin(size_t size, sf::PrimitiveType type, const sf::Texture& texture) {
 		this->m_request.reset(new Batch::request_t(size, type, texture));
 	}
 
-	Batch::request_t&& RequestBuilder::releaseRequest() {
+	Batch::request_t&& RequestBuilder::end() {
 		this->m_offset = 0;
 		return std::move(*this->m_request.release());
 	}

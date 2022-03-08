@@ -8,6 +8,7 @@ namespace aesir {
 int main() {
 	aesir::Core& core = aesir::core;
 	alone::Game game;
+	game.init();
 
 	while (core.window.isOpen()) {
 		//event processing
@@ -21,5 +22,6 @@ int main() {
 	}
 
 	core.window.close();
+
 	return 0;
 }

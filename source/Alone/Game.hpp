@@ -17,9 +17,8 @@ namespace alone {
 	};
 
 	class Player : public aesir::BoxCollider {
+		friend class Game;
 	public:
-		Player();
-
 		void init();
 
 		void update(sf::Time dt) final override;
@@ -30,8 +29,6 @@ namespace alone {
 
 	class Game {
 	public:
-		Game();
-
 		void init();
 
 		void process();
@@ -41,5 +38,7 @@ namespace alone {
 		Player _player;
 		aesir::Tilemap _tilemap;
 		sf::Text _fps;
+
+	private:
 	};
 }

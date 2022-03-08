@@ -168,6 +168,7 @@
     <ClCompile Include="source\Alone\Game.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\CTPL\ctpl_stl.h" />
     <ClInclude Include="source\Alone\Game.hpp" />
     <ClInclude Include="include\Aesir\control\Core.hpp" />
     <ClInclude Include="include\Aesir\control\InputManager.hpp" />

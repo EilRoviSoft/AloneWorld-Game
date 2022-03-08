@@ -36,6 +36,7 @@
     <ClInclude Include="include\Aesir\graphics\Camera.hpp" />
     <ClInclude Include="include\Aesir\game\Physics.hpp" />
     <ClInclude Include="source\Alone\Game.hpp" />
+    <ClInclude Include="include\CTPL\ctpl_stl.h" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="lib\glfw3.lib" />

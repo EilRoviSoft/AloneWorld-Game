@@ -15,8 +15,6 @@ namespace alone {
 
 	//Player
 
-	Player::Player() {}
-
 	void Player::init() {
 		this->_moveLeft = &aesir::core.input.at(Actions::MoveLeft);
 		this->_moveRight = &aesir::core.input.at(Actions::MoveRight);
@@ -25,7 +23,7 @@ namespace alone {
 	}
 
 	void Player::update(sf::Time dt) {
-		float daccel = accel * ((float)dt.asMilliseconds() / delay);
+		float daccel = accel / ((float)dt.asMilliseconds());
 
 		sf::Vector2 <bool> moved = { false, false };
 		if (this->_moveLeft->now) {
@@ -67,25 +65,28 @@ namespace alone {
 
 	//Game
 
-	Game::Game() {
-		this->init();
-		this->_player.init();
-	}
-
 	void Game::init() {
-		//init aesir
-		aesir::core.textures.loadFromFile("assets/settings/texture.toml");
-		aesir::core.input.loadFromFile("assets/settings/input.toml");
-		aesir::core.font.loadFromFile("assets/settings/arial.ttf");
+		//init uitl
+		aesir::core.threads.resize(1);
 
 		//init sfml
 		aesir::core.window.create(sf::VideoMode(1600, 900), "Alone World");
 		aesir::core.window.setVerticalSyncEnabled(true);
 
+		//init aesir
+		aesir::core.textures.loadFromFile("assets/settings/texture.toml");
+		aesir::core.input.loadFromFile("assets/settings/input.toml");
+		aesir::core.font.loadFromFile("assets/settings/arial.ttf");
+
 		aesir::core.font.loadFromFile("assets/settings/arial.ttf");
 
 		//init game
+		this->_fps.setFont(aesir::core.font);
+		this->_fps.setFillColor(sf::Color::Black);
+
 		this->_tilemap.loadFromFile("assets/settings/tilemap.toml");
+
+		this->_player.init();
 	}
 
 	void Game::process() {
@@ -108,15 +109,16 @@ namespace alone {
 		this->_tilemap.render();
 
 		aesir::core.batch.render(aesir::core.window);
-		aesir::core.batch.flush();
 
 		//fps
-		auto dt = aesir::core.clock.getElapsedTime().asMicroseconds();
-		this->_fps.setString(std::to_string(dt));
+		auto dt = this->_start - aesir::core.clock.getElapsedTime();
+		uint32_t fps = 1000000.f / dt.asMicroseconds();
+		this->_fps.setString(std::to_string(fps));
 		aesir::core.window.draw(this->_fps);
 
 		//display
 		aesir::core.window.display();
+		aesir::core.batch.flush();
 
 		//postupdate
 		this->_start = aesir::core.clock.getElapsedTime();
